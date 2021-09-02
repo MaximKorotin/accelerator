@@ -1,0 +1,50 @@
+.success {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 728px;
+  height: 444px;
+  margin: auto;
+  padding: 179px 0;
+  background-color: $basic__light-three;
+  box-sizing: border-box;
+  z-index: 1000;
+
+  &--open {
+    display: block;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: auto;
+    max-width: 728px;
+    height: auto;
+    max-height: 444px;
+    padding: 179px 16px;
+  }
+}
+
+.success__description {
+  margin: 0 auto;
+  max-width: 399px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 43px;
+  color: $basic__dark-two;
+  text-align: center;
+}
+
+.success__button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/icons/cross-icon.svg");
+  border: 0;
+  cursor: pointer;
+}

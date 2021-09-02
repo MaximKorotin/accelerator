@@ -4,17 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
+  <title>Moon</title>
   <link rel="preload" href="fonts/opensans-light.woff2" crossorigin="anonymous" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page-body">
-  <header class="page-header"></header>
+  <h1 class="visually-hidden">Интернет-магазин по продаже велосипедов Moon</h1>
+
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <img class="main-logo" src="img/logos/logo.svg" width="68" height="20" alt="Логотип Moon">
+      <button class="nav-toggle nav-toggle--closed nav-toggle--nojs" type="button" aria-label="Открыть меню">
+        <span class="nav-toggle__button"></span>
+      </button>
+    </div>
+
+    <div class="page-header__container">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#features">О нас</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#bicycles">Виды велосипедов</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#video">Видео про велосипеды</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="main-block">
+        <h2 class="main-block__title">Мы продаем велосипеды</h2>
+        <p class="main-block__description">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+      </div>
+
+      <form class="selection-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="selection-form__description">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+        <div class="selection-form__wrapper">
+          <label class="visually-hidden" for="name">Имя</label>
+          <input class="selection-form__input" type="text" id="name" name="name" placeholder="Введите Ваше Имя" required minlength="2">
+        </div>
+        <div class="selection-form__wrapper">
+          <label class="visually-hidden" for="phone">Номер телефона</label>
+          <input class="selection-form__input" type="tel" id="phone" name="phone" placeholder="Введите Ваш номер телефона" pattern="[0-9]{11}" required>
+        </div>
+        <button class="selection-form__button" type="submit">Подобрать велосипед мечты</button>
+      </form>
+    </div>
+  </header>
 
   <main class="page-main">
   </main>
 
   <footer class="page-footer"></footer>
+
+  <section class="success">
+    <h2 class="visually-hidden">Окно успешной отправки формы</h2>
+    <p class="success__description">Форма успешно отправлена, спасибо! :)</p>
+    <button class="success__button" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+  </section>
+
+  <div class="overlay">
+    <span class="visually-hidden">Оверлей</span>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

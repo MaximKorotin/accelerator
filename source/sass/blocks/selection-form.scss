@@ -1,0 +1,112 @@
+.selection-form {
+  width: 327px;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    order: 3;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px 71px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    order: 3;
+    width: 321px;
+    padding: 0 0 70px;
+  }
+}
+
+.selection-form__description {
+  margin: 0 0 19px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  letter-spacing: -0.01px;
+  color: $basic__white;
+  text-align: center;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    margin: 0 0 30px;
+    font-size: 18px;
+    color: $basic__black;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 0 0 20px;
+  }
+}
+
+.selection-form__input {
+  width: 100%;
+  height: 48px;
+  margin: 0 0 20px;
+  padding: 3px 28px 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: $basic__dark-two;
+  background-color: $basic__white;
+  border: 1px solid $basic__light;
+  border-radius: 6px;
+  box-sizing: border-box;
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+
+  &:hover,
+  &:focus {
+    padding: 3px 26px 0;
+    border: 3px solid $basic__accent;
+    outline: none;
+  }
+
+  &--invalid {
+    padding: 3px 26px 0;
+    border: 3px solid $basic__error;
+    outline: none;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    padding: 2px 25px 0;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding: 0 20px;
+  }
+}
+
+.selection-form__button {
+  width: 100%;
+  height: 51px;
+  padding: 2px 0 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  color: $basic__black;
+  border: none;
+  background-color: $basic__accent;
+  border-radius: 6px;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $basic__white;
+    outline: none;
+  }
+
+  &:active {
+    border: 2px solid $basic__white;
+    color: $basic__white;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: -1px 0 0;
+    padding: 0 2px 3px 0;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding: 2px 0 0 2px;
+  }
+}

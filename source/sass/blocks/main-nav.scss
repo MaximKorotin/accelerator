@@ -1,0 +1,106 @@
+.main-nav {
+  width: 880px;
+  margin: 0 auto 261px;
+  padding-left: 4px;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    order: 2;
+
+    &--closed {
+      display: none;
+    }
+
+    &--opened {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0;
+      z-index: 10;
+    }
+
+    &--nojs {
+      display: block;
+      width: 100%;
+      margin: 0 0 30px;
+      padding: 0;
+    }
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 135px;
+  row-gap: 10px;
+  width: 874px;
+  margin: 0;
+  padding: 0 0 8px 17px;
+  list-style: none;
+  border-bottom: 1px solid transparentize($basic__white, 0.8);
+  box-sizing: border-box;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 30px;
+    width: auto;
+    min-width: 320px;
+    height: 100vh;
+    padding: 100px 0 138px;
+    background-color: $basic__white;
+    box-sizing: border-box;
+  }
+}
+
+.main-nav--nojs .main-nav__list {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0 0 30px;
+  }
+}
+
+.main-nav__link {
+  display: block;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: -0.01px;
+  color: $basic__white;
+  opacity: 0.7;
+
+  &:hover,
+  &:focus {
+    color: $basic__accent;
+    outline: none;
+    opacity: 1;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    min-width: 320px;
+    height: 60px;
+    padding: 0 16px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: $basic__dark-four;
+    background-color: $basic__light-four;
+    opacity: 1;
+    box-sizing: border-box;
+
+    &::after {
+      content: "";
+      width: 25px;
+      height: 25px;
+      background-image: url("../../img/icons/arrow-icon.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}

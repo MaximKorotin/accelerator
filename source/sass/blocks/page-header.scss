@@ -1,0 +1,41 @@
+.page-header {
+  margin: 0 auto;
+  padding: 21px 0 239px;
+  background-color: $basic__dark;
+  background-image: url("../img/bike.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bike@2x.jpg");
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    padding: 0;
+    background-color: transparent;
+    background-image: linear-gradient(transparent 340px, $basic__white 340px),
+      url("../img/bike-tablet.jpg"),
+      linear-gradient($basic__dark 340px, transparent 340px);
+    background-size: 100%;
+    background-position: top;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(transparent 340px, $basic__white 340px),
+        url("../img/bike-tablet@2x.jpg"),
+        linear-gradient($basic__dark 340px, transparent 340px);
+    }
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    background-image: linear-gradient(transparent 390px, $basic__white 390px),
+      url("../img/bike-mobile.jpg"),
+      linear-gradient($basic__dark 390px, transparent 390px);
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(transparent 390px, $basic__white 390px),
+        url("../img/bike-mobile@2x.jpg"),
+        linear-gradient($basic__dark 390px, transparent 390px);
+    }
+  }
+}
