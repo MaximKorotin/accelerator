@@ -5,20 +5,16 @@ const nameInput = selectionForm.querySelector('#name');
 const phoneInput = selectionForm.querySelector('#phone');
 const success = document.querySelector('.success');
 const overlay = document.querySelector('.overlay');
+const anchors = document.querySelectorAll('.main-nav__link');
 
-let isStorageSupport = true;
-let storageName = "";
-let storagePhone = "";
+let storageName = '';
+let storagePhone = '';
 
 navToggle.classList.remove('nav-toggle--nojs');
 navMain.classList.remove('main-nav--nojs');
 
-try {
-  storageName = localStorage.getItem('name');
-  storagePhone = localStorage.getItem('phone');
-} catch (err) {
-  isStorageSupport = false;
-}
+storageName = localStorage.getItem('name');
+storagePhone = localStorage.getItem('phone');
 
 if (storageName) {
   nameInput.value = storageName;
@@ -26,6 +22,19 @@ if (storageName) {
 
 if (storagePhone) {
   phoneInput.value = storagePhone;
+}
+
+for (const anchor of anchors) {
+  anchor.addEventListener('click', (evt) => {
+    evt.preventDefault();
+
+    const blockID = anchor.getAttribute('href').substr(1);
+
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  });
 }
 
 navToggle.addEventListener('click', () => {
@@ -78,8 +87,8 @@ phoneInput.addEventListener('input', () => {
 selectionForm.addEventListener('submit', (evt) => {
   if (nameInput.value && phoneInput.value) {
     evt.preventDefault();
-    localStorage.setItem("name", nameInput.value);
-    localStorage.setItem("phone", phoneInput.value);
+    localStorage.setItem('name', nameInput.value);
+    localStorage.setItem('phone', phoneInput.value);
     success.classList.add('success--open');
     overlay.classList.add('overlay--open');
   } else {
@@ -89,14 +98,14 @@ selectionForm.addEventListener('submit', (evt) => {
   if (success) {
     const successButton = success.querySelector('.success__button');
 
-    successButton.addEventListener('click', (evt) => {
-      evt.preventDefault();
+    successButton.addEventListener('click', (event) => {
+      event.preventDefault();
       success.classList.remove('success--open');
       overlay.classList.remove('overlay--open');
     });
 
-    window.addEventListener('keydown', (evt) => {
-      if (evt.keyCode === 27) {
+    window.addEventListener('keydown', (event) => {
+      if (event.keyCode === 27) {
         if (success.classList.contains('success--open')) {
           evt.preventDefault();
           success.classList.remove('success--open');

@@ -5,6 +5,7 @@ const nameInput = selectionForm.querySelector('#name');
 const phoneInput = selectionForm.querySelector('#phone');
 const success = document.querySelector('.success');
 const overlay = document.querySelector('.overlay');
+const anchors = document.querySelectorAll('.main-nav__link');
 
 let storageName = '';
 let storagePhone = '';
@@ -21,6 +22,19 @@ if (storageName) {
 
 if (storagePhone) {
   phoneInput.value = storagePhone;
+}
+
+for (const anchor of anchors) {
+  anchor.addEventListener('click', (evt) => {
+    evt.preventDefault();
+
+    const blockID = anchor.getAttribute('href').substr(1);
+
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  });
 }
 
 navToggle.addEventListener('click', () => {
