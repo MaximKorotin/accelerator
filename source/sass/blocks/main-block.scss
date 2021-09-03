@@ -33,6 +33,7 @@
     margin: 0 0 19px;
     font-size: 30px;
     line-height: 42px;
+    letter-spacing: -0.15px;
   }
 }
 
@@ -45,5 +46,6 @@
 
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
     font-size: 18px;
+    letter-spacing: -0.08px;
   }
 }
