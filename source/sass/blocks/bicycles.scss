@@ -1,15 +1,15 @@
 .bicycles {
   margin: 0 auto;
-  padding: 150px 80px 147px;
+  padding: 150px 80px 150px;
   text-align: center;
   background-color: $basic__light-two;
 
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    padding: 50px 52px 70px;
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    padding: 50px 25px 54px;
   }
 
-  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    padding: 50px 25px;
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding: 50px 52px 70px;
   }
 }
 

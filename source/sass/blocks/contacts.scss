@@ -20,6 +20,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  outline: none;
 }
 
 .contacts__link--phone {
@@ -47,4 +48,9 @@
     margin-top: -3px;
     line-height: 22px;
   }
+}
+
+.contacts__link:hover .contacts__description,
+.contacts__link:focus .contacts__description {
+  opacity: 1;
 }

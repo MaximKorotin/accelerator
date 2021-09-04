@@ -5,11 +5,11 @@
   text-align: center;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    padding: 0 0 53px;
+    padding: 70px 0 53px;
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    padding: 0 35px 53px;
+    padding: 70px 35px 53px;
   }
 }
 
