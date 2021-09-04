@@ -1,8 +1,221 @@
 .bicycles {
   margin: 0 auto;
+  padding: 150px 80px 147px;
+  text-align: center;
   background-color: $basic__light-two;
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding: 50px 52px 70px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    padding: 50px 25px;
+  }
 }
 
 .bicycles__title {
+  margin: 0 0 50px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.08px;
+  color: $basic__dark-three;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    margin: 0 0 30px;
+    font-size: 24px;
+    line-height: 41px;
+  }
+}
+
+.bicycles__list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  row-gap: 50px;
+  justify-content: center;
+  align-items: flex-start;
   margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $mobile-width) and (max-width: 639px) {
+    row-gap: 42px;
+  }
+}
+
+.bicycle {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.bicycle--road {
+  margin-top: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 156px;
+    left: -60px;
+    width: 180px;
+    height: 180px;
+    border: 27px solid $basic__accent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 0;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1285px) {
+    margin-top: 0;
+    order: 1;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    margin-top: 0;
+
+    &::before {
+      top: auto;
+      bottom: 26px;
+      left: -37px;
+      width: 127px;
+      height: 127px;
+      border-width: 18px;
+    }
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 639px) {
+    &::before {
+      bottom: 26px;
+      left: -24px;
+    }
+  }
+}
+
+.bicycle--mountain {
+  margin-top: 39px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: -19px;
+    width: 47px;
+    height: 47px;
+    border: 8px solid $basic__accent;
+    box-sizing: border-box;
+    z-index: 10;
+  }
+
+  &::after {
+    top: auto;
+    bottom: 31px;
+    left: auto;
+    right: -23px;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1285px) {
+    order: 3;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    margin-top: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.bicycle--children {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -32px;
+    right: -36px;
+    width: 95px;
+    height: 95px;
+    border: 17px solid $basic__accent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 10;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1285px) {
+    order: 2;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    &::before {
+      top: -20px;
+      right: -25px;
+      width: 68px;
+      height: 68px;
+      border-width: 13px;
+    }
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 639px) {
+    &::before {
+      right: -15px;
+    }
+  }
+}
+
+.bicycle__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.5px;
+  color: $basic__black;
+}
+
+.bicycle__image {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  z-index: 5;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    width: 270px;
+    height: 300px;
+  }
+}
+
+.bicycle__image--road {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    content: url("../img/road-bike-mini.jpg");
+
+    @media (min-resolution: 2dppx) {
+      content: url("../img/road-bike-mini@2x.jpg");
+    }
+  }
+}
+
+.bicycle__image--mountain {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    content: url("../img/mountain-bike-mini.jpg");
+
+    @media (min-resolution: 2dppx) {
+      content: url("../img/mountain-bike-mini@2x.jpg");
+    }
+  }
+}
+
+.bicycle__image--children {
+  @media (min-width: 1024px) and (max-width: 1285px) {
+    height: 503px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    content: url("../img/children-bike-mini.jpg");
+
+    @media (min-resolution: 2dppx) {
+      content: url("../img/children-bike-mini@2x.jpg");
+    }
+  }
 }
