@@ -15,7 +15,7 @@
   }
 }
 
-.video__title {
+.video h2 {
   margin: 0 0 18px;
   font-weight: 600;
   font-size: 30px;
@@ -29,7 +29,7 @@
   }
 }
 
-.video__description {
+.video p {
   width: 340px;
   margin: 0 auto 56px;
   font-weight: 300;
@@ -59,7 +59,7 @@
   }
 }
 
-.video-player__video {
+.video-player video {
   display: block;
   margin: 0 auto;
   object-fit: cover;
@@ -109,9 +109,17 @@
     width: 90px;
     height: 90px;
 
-    & svg {
-      width: 90px;
-      height: 90px;
+    &:hover,
+    &:focus {
+      width: 98px;
+      height: 98px;
     }
+  }
+}
+
+.video-player__button svg {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: 90px;
+    height: 90px;
   }
 }

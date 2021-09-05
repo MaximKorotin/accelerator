@@ -37,20 +37,21 @@
   left: 1px;
 }
 
-.contacts__description {
+
+.contacts__link span {
   margin: 0 0 0 15px;
   font-size: 16px;
   line-height: 32px;
   color: $basic__black;
   opacity: 0.5;
-
-  &--email {
-    margin-top: -3px;
-    line-height: 22px;
-  }
 }
 
-.contacts__link:hover .contacts__description,
-.contacts__link:focus .contacts__description {
+.contacts__link--email span {
+  margin-top: -3px;
+  line-height: 22px;
+}
+
+.contacts__link:hover span,
+.contacts__link:focus span {
   opacity: 1;
 }

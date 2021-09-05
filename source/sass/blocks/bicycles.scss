@@ -13,7 +13,7 @@
   }
 }
 
-.bicycles__title {
+.bicycles h2 {
   margin: 0 0 50px;
   font-weight: 600;
   font-size: 30px;
@@ -164,7 +164,7 @@
   }
 }
 
-.bicycle__title {
+.bicycle h3 {
   margin: 0;
   font-weight: 600;
   font-size: 22px;
@@ -172,7 +172,7 @@
   color: $basic__black;
 }
 
-.bicycle__image {
+.bicycle img {
   position: relative;
   display: block;
   margin-bottom: 20px;
@@ -186,7 +186,7 @@
   }
 }
 
-.bicycle__image--road {
+.bicycle--road img {
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
     content: url("../img/road-bike-mini.jpg");
 
@@ -196,7 +196,7 @@
   }
 }
 
-.bicycle__image--mountain {
+.bicycle--mountain img {
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
     content: url("../img/mountain-bike-mini.jpg");
 
@@ -206,7 +206,7 @@
   }
 }
 
-.bicycle__image--children {
+.bicycle--children img {
   @media (min-width: 1024px) and (max-width: 1285px) {
     height: 503px;
   }
