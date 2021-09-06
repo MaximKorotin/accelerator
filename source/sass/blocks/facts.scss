@@ -29,6 +29,7 @@
 }
 
 .facts__list {
+  counter-reset: section;
   display: flex;
   flex-wrap: wrap;
   column-gap: 38px;
@@ -50,23 +51,26 @@
 
 .facts__item {
   width: 263px;
-}
 
-.fact h3 {
-  margin: 0 0 14px;
-  padding-right: 2px;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 38px;
-  letter-spacing: -1.27px;
-  color: $basic__accent;
+  &::before {
+    counter-increment: section;
+    content: counter(section, decimal-leading-zero);
+    display: block;
+    margin: 0 0 14px;
+    padding-right: 2px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -1.27px;
+    color: $basic__accent;
 
-  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    margin: 0 0 8px;
-  }
+    @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+      margin: 0 0 8px;
+    }
 
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    margin: 0 0 15px;
+    @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+      margin: 0 0 15px;
+    }
   }
 }
 

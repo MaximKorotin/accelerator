@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Moon</title>
-  <link rel="preload" href="fonts/opensans-light.woff2" crossorigin="anonymous" as="font">
+  <link rel="preload" href="fonts/opensans-light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -46,10 +49,14 @@
 
       <form class="selection-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="selection-form__description">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-        <label class="visually-hidden" for="name">Имя</label>
-        <input type="text" id="name" name="name" placeholder="Введите Ваше Имя" required="" minlength="2">
-        <label class="visually-hidden" for="phone">Номер телефона</label>
-        <input type="tel" id="phone" name="phone" placeholder="Введите Ваш номер телефона" pattern="[0-9]{11}" required="">
+        <div class="selection-form__wrapper">
+          <label class="visually-hidden" for="name">Имя</label>
+          <input type="text" id="name" name="name" placeholder="Введите Ваше Имя" required="" minlength="2">
+        </div>
+        <div class="selection-form__wrapper">
+          <label class="visually-hidden" for="phone">Номер телефона</label>
+          <input type="tel" id="phone" name="phone" placeholder="Введите Ваш номер телефона" pattern="[0-9]{11}" required="">
+        </div>
         <button class="selection-form__button" type="submit">Подобрать велосипед мечты</button>
       </form>
     </div>
@@ -60,19 +67,15 @@
       <h2 id="facts">Несколько фактов о нас</h2>
       <ul class="facts__list">
         <li class="facts__item fact">
-          <h3>01</h3>
           <p>Самый широкий выбор велосипедов!</p>
         </li>
         <li class="facts__item fact">
-          <h3>02</h3>
           <p>Доставка велосипедов по всей России!</p>
         </li>
         <li class="facts__item fact">
-          <h3>03</h3>
           <p>Большой выбор крутых аксессуаров!</p>
         </li>
         <li class="facts__item fact">
-          <h3>04</h3>
           <p>Профессиональные консультации!</p>
         </li>
       </ul>

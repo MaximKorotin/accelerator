@@ -1,12 +1,13 @@
 (function () {
-  const navMain = document.querySelector('.main-nav');
-  const navToggle = document.querySelector('.nav-toggle');
-  const selectionForm = document.querySelector('.selection-form');
+  const body = document.querySelector('.page-body');
+  const navMain = body.querySelector('.main-nav');
+  const navToggle = body.querySelector('.nav-toggle');
+  const selectionForm = body.querySelector('.selection-form');
   const nameInput = selectionForm.querySelector('#name');
   const phoneInput = selectionForm.querySelector('#phone');
-  const success = document.querySelector('.success');
-  const overlay = document.querySelector('.overlay');
-  const anchors = document.querySelectorAll('.main-nav__link');
+  const success = body.querySelector('.success');
+  const overlay = body.querySelector('.overlay');
+  const anchors = body.querySelectorAll('.main-nav__link');
 
   let storageName = '';
   let storagePhone = '';
@@ -40,11 +41,13 @@
 
   navToggle.addEventListener('click', () => {
     if (navMain.classList.contains('main-nav--closed')) {
+      body.classList.add('mobile-menu');
       navMain.classList.remove('main-nav--closed');
       navMain.classList.add('main-nav--opened');
       navToggle.classList.remove('nav-toggle--closed');
       navToggle.classList.add('nav-toggle--opened');
     } else {
+      body.classList.remove('mobile-menu');
       navMain.classList.add('main-nav--closed');
       navMain.classList.remove('main-nav--opened');
       navToggle.classList.add('nav-toggle--closed');
