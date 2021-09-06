@@ -51,11 +51,11 @@
         <p class="selection-form__description">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
         <div class="selection-form__wrapper">
           <label class="visually-hidden" for="name">Имя</label>
-          <input type="text" id="name" name="name" placeholder="Введите Ваше Имя" required="" minlength="2">
+          <input type="text" id="name" name="name" placeholder="Введите Ваше Имя" required="" minlength="1">
         </div>
         <div class="selection-form__wrapper">
           <label class="visually-hidden" for="phone">Номер телефона</label>
-          <input type="tel" id="phone" name="phone" placeholder="Введите Ваш номер телефона" pattern="[0-9]{11}" required="">
+          <input type="tel" id="phone" name="phone" pattern="^[+-?\d?()?\s]{11,18}$" placeholder="Введите Ваш номер телефона" required="">
         </div>
         <button class="selection-form__button" type="submit">Подобрать велосипед мечты</button>
       </form>

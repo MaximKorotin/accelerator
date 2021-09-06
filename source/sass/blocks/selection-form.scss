@@ -63,12 +63,6 @@
     outline: none;
   }
 
-  &--invalid {
-    padding: 3px 26px 0;
-    border: 3px solid $basic__error;
-    outline: none;
-  }
-
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
     padding: 2px 25px 0;
 
@@ -120,4 +114,10 @@
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     padding: 2px 0 0 2px;
   }
+}
+
+.selection-form .invalid {
+  padding: 3px 26px 0;
+  border: 3px solid $basic__error;
+  outline: none;
 }

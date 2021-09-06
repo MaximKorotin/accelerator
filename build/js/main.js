@@ -60,32 +60,33 @@
     const minNameLength = nameInput.minLength;
 
     if (nameInput.validity.valueMissing) {
-      nameInput.classList.add('selection-form__input--invalid');
+      nameInput.classList.add('invalid');
       nameInput.setCustomValidity('Это поле обязательно для заполнения.');
     } else if (valueLength < minNameLength) {
-      nameInput.classList.add('selection-form__input--invalid');
+      nameInput.classList.add('invalid');
       nameInput.setCustomValidity(`Имя должно содержать минимум
         ${minNameLength} символа. Добавьте ещё ${minNameLength - valueLength} симв.`);
     } else {
-      nameInput.classList.remove('selection-form__input--invalid');
+      nameInput.classList.remove('invalid');
       nameInput.setCustomValidity('');
     }
     nameInput.reportValidity();
   });
 
   phoneInput.addEventListener('input', () => {
-    const pattern = /^[0-9]{11}$/;
+    const pattern = /^[+-?\d?()?\s]{11,18}$/;
 
     if (phoneInput.validity.valueMissing) {
-      phoneInput.classList.add('selection-form__input--invalid');
+      phoneInput.classList.add('invalid');
       phoneInput.setCustomValidity('Это поле обязательно для заполнения.');
     } else if (pattern.test(phoneInput.value)) {
-      phoneInput.classList.remove('selection-form__input--invalid');
+      phoneInput.classList.remove('invalid');
       phoneInput.setCustomValidity('');
     } else {
-      phoneInput.classList.add('selection-form__input--invalid');
-      phoneInput.setCustomValidity('Нужно ввести 11-ти значный номер телефона в формате 81234567890');
+      phoneInput.classList.add('invalid');
+      phoneInput.setCustomValidity('Номер не должен содержать букв и должен состоять из 11 цифр');
     }
+    phoneInput.reportValidity();
   });
 
   selectionForm.addEventListener('submit', (evt) => {
