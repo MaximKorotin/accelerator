@@ -14,20 +14,27 @@
   }
 }
 
-.page-header__wrapper img {
+.page-header__logo {
+  display: block;
   position: absolute;
   top: 297px;
   left: 0;
+  width: 68px;
+  height: 21px;
 
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
     position: relative;
-    top: 20px;
+    top: 25px;
     left: 22px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
     left: 17px;
   }
+}
+
+.page-header__logo img {
+  display: block;
 }
 
 .nav-toggle {
@@ -55,12 +62,12 @@
 .nav-toggle--opened {
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
     position: fixed;
-    top: 15px;
-    right: 14px;
-    width: 22px;
-    height: 22px;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
     padding: 0;
-    background: url("../img/icons/cross-icon.svg") no-repeat;
+    background: url("../img/icons/cross-icon.svg") no-repeat 50%;
     border: none;
     z-index: 150;
   }

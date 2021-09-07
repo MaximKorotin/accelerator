@@ -36,6 +36,11 @@
         behavior: 'smooth',
         block: 'start',
       });
+      body.classList.remove('mobile-menu');
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+      navToggle.classList.add('nav-toggle--closed');
+      navToggle.classList.remove('nav-toggle--opened');
     });
   }
 
@@ -94,6 +99,7 @@
       evt.preventDefault();
       localStorage.setItem('name', nameInput.value);
       localStorage.setItem('phone', phoneInput.value);
+      body.classList.add('mobile-menu');
       success.classList.add('success--open');
       overlay.classList.add('overlay--open');
     } else {
@@ -107,6 +113,7 @@
         event.preventDefault();
         success.classList.remove('success--open');
         overlay.classList.remove('overlay--open');
+        body.classList.remove('mobile-menu');
       });
 
       window.addEventListener('keydown', (event) => {
@@ -115,6 +122,7 @@
             evt.preventDefault();
             success.classList.remove('success--open');
             overlay.classList.remove('overlay--open');
+            body.classList.remove('mobile-menu');
           }
         }
       });
@@ -122,6 +130,7 @@
       overlay.addEventListener('click', () => {
         success.classList.remove('success--open');
         overlay.classList.remove('overlay--open');
+        body.classList.remove('mobile-menu');
       });
     }
   });

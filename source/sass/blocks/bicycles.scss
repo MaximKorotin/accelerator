@@ -1,15 +1,15 @@
 .bicycles {
   margin: 0 auto;
-  padding: 150px 80px 150px;
+  padding: 150px 80px 100px;
   text-align: center;
   background-color: $basic__light-two;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    padding: 50px 25px 54px;
+    padding: 50px 25px 12px;
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    padding: 50px 52px 70px;
+    padding: 49px 52px 20px;
   }
 }
 
@@ -31,16 +31,23 @@
 .bicycles__list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 50px;
-  row-gap: 50px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  margin: 0;
+  width: 1175px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 
-  @media (min-width: $mobile-width) and (max-width: 639px) {
-    row-gap: 42px;
+  @media (min-width: 1024px) and (max-width: 1340px) {
+    width: 790px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: 270px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: 640px;
   }
 }
 
@@ -48,6 +55,11 @@
   position: relative;
   display: flex;
   flex-direction: column-reverse;
+  margin: 0 auto 50px;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 0 auto 42px;
+  }
 }
 
 .bicycle--road {
@@ -66,9 +78,8 @@
     z-index: 0;
   }
 
-  @media (min-width: 1024px) and (max-width: 1285px) {
+  @media (min-width: 1024px) and (max-width: 1340px) {
     margin-top: 0;
-    order: 1;
   }
 
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
@@ -115,8 +126,8 @@
     right: -23px;
   }
 
-  @media (min-width: 1024px) and (max-width: 1285px) {
-    order: 3;
+  @media (min-width: 1024px) and (max-width: 1340px) {
+    margin-top: 0;
   }
 
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
@@ -141,10 +152,6 @@
     border-radius: 50%;
     box-sizing: border-box;
     z-index: 10;
-  }
-
-  @media (min-width: 1024px) and (max-width: 1285px) {
-    order: 2;
   }
 
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
@@ -197,6 +204,10 @@
 }
 
 .bicycle--mountain img {
+  @media (min-width: 1024px) and (max-width: 1340px) {
+    height: 503px;
+  }
+
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
     content: url("../img/mountain-bike-mini.jpg");
 
@@ -207,7 +218,7 @@
 }
 
 .bicycle--children img {
-  @media (min-width: 1024px) and (max-width: 1285px) {
+  @media (min-width: 1024px) and (max-width: 1340px) {
     height: 503px;
   }
 

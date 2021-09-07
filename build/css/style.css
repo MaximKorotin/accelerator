@@ -130,22 +130,29 @@ img {
   }
 }
 
-.page-header__wrapper img {
+.page-header__logo {
+  display: block;
   position: absolute;
   top: 297px;
   left: 0;
+  width: 68px;
+  height: 21px;
 }
 @media (min-width: 0) and (max-width: 1023px) {
-  .page-header__wrapper img {
+  .page-header__logo {
     position: relative;
-    top: 20px;
+    top: 25px;
     left: 22px;
   }
 }
 @media (min-width: 0) and (max-width: 767px) {
-  .page-header__wrapper img {
+  .page-header__logo {
     left: 17px;
   }
+}
+
+.page-header__logo img {
+  display: block;
 }
 
 .nav-toggle {
@@ -174,12 +181,12 @@ img {
 @media (min-width: 0) and (max-width: 1023px) {
   .nav-toggle--opened {
     position: fixed;
-    top: 15px;
-    right: 14px;
-    width: 22px;
-    height: 22px;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
     padding: 0;
-    background: url("../img/icons/cross-icon.svg") no-repeat;
+    background: url("../img/icons/cross-icon.svg") no-repeat 50%;
     border: none;
     z-index: 150;
   }
@@ -262,26 +269,26 @@ img {
   width: 874px;
   margin: 0;
   padding: 0 0 8px 17px;
-  list-style: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  list-style: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 @media (min-width: 0) and (max-width: 1023px) {
   .main-nav__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-column-gap: 0;
-       -moz-column-gap: 0;
-            column-gap: 0;
     row-gap: 30px;
     width: auto;
     min-width: 320px;
     height: 100vh;
-    padding: 100px 0 138px;
+    padding: 100px 0;
     background-color: #ffffff;
+    overflow: auto;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
@@ -303,6 +310,7 @@ img {
   line-height: 32px;
   letter-spacing: -0.01px;
   color: #ffffff;
+  white-space: nowrap;
   opacity: 0.7;
 }
 .main-nav__link:hover, .main-nav__link:focus {
@@ -338,7 +346,7 @@ img {
     content: "";
     width: 25px;
     height: 25px;
-    background-image: url("../../img/icons/arrow-icon.svg");
+    background-image: url("../img/icons/arrow-icon.svg");
     background-repeat: no-repeat;
   }
 }
@@ -381,7 +389,7 @@ img {
             order: 1;
     width: 288px;
     margin: 0 0 140px;
-    padding: 87px 0 0;
+    padding: 100px 0 0;
     text-align: center;
   }
 }
@@ -392,7 +400,7 @@ img {
             order: 1;
     width: 435px;
     margin: 0 0 150px;
-    padding: 101px 0 0;
+    padding: 115px 0 0;
     text-align: center;
   }
 }
@@ -742,18 +750,18 @@ img {
 
 .bicycles {
   margin: 0 auto;
-  padding: 150px 80px 150px;
+  padding: 150px 80px 100px;
   text-align: center;
   background-color: #f6f7f9;
 }
 @media (min-width: 0) and (max-width: 767px) {
   .bicycles {
-    padding: 50px 25px 54px;
+    padding: 50px 25px 12px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .bicycles {
-    padding: 50px 52px 70px;
+    padding: 49px 52px 20px;
   }
 }
 
@@ -779,23 +787,30 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-column-gap: 50px;
-     -moz-column-gap: 50px;
-          column-gap: 50px;
-  row-gap: 50px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin: 0;
+  width: 1175px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
-@media (min-width: 0) and (max-width: 639px) {
+@media (min-width: 1024px) and (max-width: 1340px) {
   .bicycles__list {
-    row-gap: 42px;
+    width: 790px;
+  }
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .bicycles__list {
+    width: 270px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .bicycles__list {
+    width: 640px;
   }
 }
 
@@ -808,6 +823,12 @@ img {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  margin: 0 auto 50px;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .bicycle {
+    margin: 0 auto 42px;
+  }
 }
 
 .bicycle--road {
@@ -826,12 +847,9 @@ img {
           box-sizing: border-box;
   z-index: 0;
 }
-@media (min-width: 1024px) and (max-width: 1285px) {
+@media (min-width: 1024px) and (max-width: 1340px) {
   .bicycle--road {
     margin-top: 0;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
   }
 }
 @media (min-width: 0) and (max-width: 1023px) {
@@ -875,11 +893,9 @@ img {
   left: auto;
   right: -23px;
 }
-@media (min-width: 1024px) and (max-width: 1285px) {
+@media (min-width: 1024px) and (max-width: 1340px) {
   .bicycle--mountain {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    margin-top: 0;
   }
 }
 @media (min-width: 0) and (max-width: 1023px) {
@@ -903,13 +919,6 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   z-index: 10;
-}
-@media (min-width: 1024px) and (max-width: 1285px) {
-  .bicycle--children {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
 }
 @media (min-width: 0) and (max-width: 1023px) {
   .bicycle--children::before {
@@ -961,6 +970,11 @@ img {
   }
 }
 
+@media (min-width: 1024px) and (max-width: 1340px) {
+  .bicycle--mountain img {
+    height: 503px;
+  }
+}
 @media (min-width: 0) and (max-width: 1023px) {
   .bicycle--mountain img {
     content: url("../img/mountain-bike-mini.jpg");
@@ -972,7 +986,7 @@ img {
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1285px) {
+@media (min-width: 1024px) and (max-width: 1340px) {
   .bicycle--children img {
     height: 503px;
   }
@@ -1124,18 +1138,18 @@ img {
 
 .page-footer {
   margin: 0 auto;
-  padding: 150px 0 98px;
+  padding: 150px 0 68px;
   margin-top: auto;
   text-align: center;
 }
 @media (min-width: 0) and (max-width: 767px) {
   .page-footer {
-    padding: 70px 0 53px;
+    padding: 70px 0 23px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .page-footer {
-    padding: 70px 35px 53px;
+    padding: 70px 35px 23px;
   }
 }
 
@@ -1189,16 +1203,22 @@ img {
 
 .map {
   position: relative;
-  margin: 0 0 35px;
+  max-width: 957px;
+  height: 530px;
+  margin: 0 auto 37px;
 }
 @media (min-width: 0) and (max-width: 767px) {
   .map {
-    margin: 0 0 33px;
+    min-width: 320px;
+    height: 250px;
+    margin: 0 auto 33px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .map {
-    margin: 0 0 17px;
+    min-width: 698px;
+    height: 545px;
+    margin: 0 auto 17px;
   }
 }
 
@@ -1246,13 +1266,14 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-column-gap: 90px;
-     -moz-column-gap: 90px;
-          column-gap: 90px;
-  margin-left: -17px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 636px;
+  margin: 0 auto;
+  padding-right: 17px;
 }
 @media (min-width: 0) and (max-width: 767px) {
   .contacts {
@@ -1260,16 +1281,16 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    row-gap: 19px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-left: 9px;
+    padding-right: 0;
+    padding-left: 9px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .contacts {
-    margin-left: -11px;
+    padding-right: 11px;
   }
 }
 
@@ -1282,6 +1303,12 @@ img {
       -ms-flex-align: center;
           align-items: center;
   outline: none;
+  margin: 0 auto 30px;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .contacts__link {
+    margin: 0 auto 20px;
+  }
 }
 
 .contacts__link--phone {
@@ -1289,7 +1316,7 @@ img {
 }
 @media (min-width: 0) and (max-width: 767px) {
   .contacts__link--phone {
-    margin-left: -20px;
+    padding-right: 21px;
   }
 }
 

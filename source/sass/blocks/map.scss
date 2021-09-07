@@ -1,13 +1,19 @@
 .map {
   position: relative;
-  margin: 0 0 35px;
+  max-width: 957px;
+  height: 530px;
+  margin: 0 auto 37px;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    margin: 0 0 33px;
+    min-width: 320px;
+    height: 250px;
+    margin: 0 auto 33px;
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    margin: 0 0 17px;
+    min-width: 698px;
+    height: 545px;
+    margin: 0 auto 17px;
   }
 }
 
