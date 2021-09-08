@@ -1,5 +1,6 @@
 .selection-form {
   width: 327px;
+  margin-right: 65px;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
     order: 3;
@@ -12,6 +13,7 @@
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     order: 3;
     width: 321px;
+    margin-right: 0;
     padding: 0 0 70px;
   }
 }
