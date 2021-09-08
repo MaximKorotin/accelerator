@@ -1,6 +1,6 @@
 .facts {
   margin: 0 auto;
-  padding: 151px 137px 153px;
+  padding: 151px 0 153px;
   text-align: center;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
@@ -30,22 +30,27 @@
 
 .facts__list {
   counter-reset: section;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 263px);
   column-gap: 38px;
-  row-gap: 30px;
+  row-gap: 43px;
   justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
 
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    grid-template-columns: repeat(2, 263px);
+  }
+
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    grid-template-columns: 263px;
     row-gap: 46px;
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    grid-template-columns: repeat(2, 263px);
     column-gap: 30px;
-    row-gap: 43px;
   }
 }
 
